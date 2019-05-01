@@ -5,8 +5,5 @@
     "k8s_version": "v1.9.4",
     "k8s_driver": "virtualbox",
     "k8s_memory": 8198,
-    "k8s_cpus": 2,
-
-    "couchbase_username": "piptemplatesadmin",
-    "couchbase_password": "piptemplatesadmin2019#"
+    "k8s_cpus": 2
 }

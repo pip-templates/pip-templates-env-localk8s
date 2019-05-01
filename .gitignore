@@ -1,18 +1,8 @@
-.DS_Store
+./local/.vagrant
+./local/Vagrant
 
-/common/*.yml
-/common/k8s_nodes
-/common/*playbook*
+./config/*
+!./config/*config.example*
 
-/local/.vagrant
-/local/Vagrant
-
-/cloud/*.yml
-/cloud/*.json
-
-/config/*
-!/config/*config.example*
-
-/temp/*
-!/temp/dummy.txt
-.vscode/launch.json
+./temp/*
+!./temp/dummy.txt
