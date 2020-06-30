@@ -45,13 +45,6 @@ If you have any problem with not installed tools - use `install_prereq_` script 
 | Temp | Folder for storing automaticaly created temporary files. | 
 | Templates | Folder for storing templates, such as kubernetes yml files, az resource manager json files, ansible playbooks, etc. | 
 
-# Environment types
-There are 3 types of enviroment: 
-
-* Cloud - resources created by azure resource manager, use azure kubernetes services (AKS) for deploying kubernetes cluster, etc.
-* On premises - use existing instances and via ansible install kubernetes cluster using kubeadm. Also created install azure virtual machines script to simulate existing instances.
-* Local - use minikube to install kubernetes cluster. 
-
 ### Local environment
 
 * Local config parameters
