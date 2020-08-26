@@ -1,8 +1,0 @@
-./local/.vagrant
-./local/Vagrant
-
-./config/*
-!./config/*config.example*
-
-./temp/*
-!./temp/dummy.txt
