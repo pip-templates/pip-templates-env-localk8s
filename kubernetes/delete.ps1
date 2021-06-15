@@ -73,7 +73,7 @@ if ((Test-EnvMapValue -Map $resources -Key "$ResourcePrefix") -and (Test-EnvMapV
 }
 else 
 {
-    Write-Host "K8s cluster isn't created. Deletion skipped."
+    Write-Host "K8S cluster doesn't exists. Deletion skipped."
     exit 0
 }
 ###################################################################
