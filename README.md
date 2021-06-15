@@ -18,7 +18,7 @@ Config variables description
 | Variable | Default value | Description |
 |----|----|---|
 | environment.type | local | Type of the environment |
-| environment.version | local | Version of the environment |
+| environment.version | 1.0.0 | Version of the environment |
 | k8s.minikube_home |  | Path to minikube home directory. Can be empty |
 | k8s.version | v1.20.2 | Version of installing kubernetes |
 | k8s.driver | docker | Name of kubernetes driver |
