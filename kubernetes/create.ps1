@@ -55,9 +55,11 @@ if (!((Test-EnvMapValue -Map $resources -Key "$ResourcePrefix") -and (Test-EnvMa
     $blobs_storage_gb = Get-EnvMapValue -Map $config -Key "$ConfigPrefix.blobs_storage_gb"
 
     # Set default values for config parameters
-    if ($driver -eq "hyperv") {
+    if ($driver -eq "hyperv") 
+    {
         $hyperv_switch = Get-EnvMapValue -Map $config -Key "$ConfigPrefix.hyperv_switch"
-        if ($hyperv_switch -eq $null) {
+        if ($hyperv_switch -eq $null) 
+        {
             throw "Create Hyper-V Switch and set k8s.hyperv_switch setting. Refer to https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/"
             
         }
@@ -65,14 +67,16 @@ if (!((Test-EnvMapValue -Map $resources -Key "$ResourcePrefix") -and (Test-EnvMa
     }
 
     # Set minikube home directory
-    if ($minikube_home -ne "") {
+    if ($minikube_home -ne "") 
+    {
         $env:MINIKUBE_HOME = $minikube_home
     }
 
     # Compare installed version to version set in config
     $localMinikubeVersion = $(minikube version --short) -replace '(minikube version:) (.*)','$2'
     $setMinikubeVersion = Get-EnvMapValue -Map $config -Key "$ConfigPrefix.version"
-    if ($localMinikubeVersion -gt $setMinikubeVersion){
+    if ($localMinikubeVersion -gt $setMinikubeVersion)
+    {
         Write-Error $("Locally installed minikube version ($localMinikubeVersion) is greater than the one set in the environment config ($setMinikubeVersion). " `
             + "Please update config's k8s.version to match the locally installed version.")
     }
@@ -84,7 +88,8 @@ if (!((Test-EnvMapValue -Map $resources -Key "$ResourcePrefix") -and (Test-EnvMa
         $switches `
         --kubernetes-version=$($version)
 
-    if ($LastExitCode -ne 0){
+    if ($LastExitCode -ne 0)
+    {
         Write-Error "There were errors starting minikube, Watch logs above"
     }
 
