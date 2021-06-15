@@ -6,7 +6,7 @@ This module stores scripts for management local kubernetes environment.
 # Usage
 
 - Download this repository
-- Copy *src* folder to master template
+- Copy *kubernetes* folder to master template
 - Add content of *.ps1.add* files to correspondent files from master template
 - Add content of *config/config.k8s.json.add* to json config file from master template and set the required values
 
@@ -16,9 +16,12 @@ Config variables description
 
 | Variable | Default value | Description |
 |----|----|---|
-| env_type | local | Type of kubernetes environment |
-| minikube_home |  | Path to minikube home directory. Can be empty |
-| k8s_version | v1.9.4 | Version of installing kubernetes |
-| k8s_driver | virtualbox | Name of kubernetes driver |
-| k8s_memory | 8198 | Allocated memory for minikube virtual machine |
-| k8s_cpus | 2 | Allocated cpu for minikube virtual machine |
+| environment.type | local | Type of the environment |
+| environment.type | local | Version of the environment |
+| k8s.minikube_home |  | Path to minikube home directory. Can be empty |
+| k8s,version | v1.20.2 | Version of installing kubernetes |
+| k8s.driver | docker | Name of kubernetes driver |
+| k8s.memory | 8198 | Allocated memory for minikube virtual machine |
+| k8s.cpus | 2 | Allocated cpu for minikube virtual machine |
+| k8s.namespace | infra | Kubernetes namespace for components and services |
+| k8s.blobs_storage_gb | 5 | Size of blobs persistence storage |

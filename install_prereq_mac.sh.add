@@ -3,3 +3,4 @@ brew install kubernetes-cli
 brew cask install docker
 brew cask install minikube
 brew cask install virtualbox
+brew install helm

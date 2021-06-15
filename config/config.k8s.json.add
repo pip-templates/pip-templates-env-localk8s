@@ -1,9 +1,16 @@
 {
-    "env_type": "local",
-
-    "minikube_home": "",
-    "k8s_version": "v1.9.4",
-    "k8s_driver": "virtualbox",
-    "k8s_memory": 8198,
-    "k8s_cpus": 2
+    "environment" : {
+        "type": "local",
+        "version": "1.0.0"
+    },
+    "k8s" : {
+        "minikube_home" : "",
+        "version": "v1.20.2",
+        "driver": "docker",
+        "hyperv_switch": "",
+        "memory": 4096,
+        "cpus": 2,
+        "namespace": "infra",
+        "blobs_storage_gb": 5
+    }
 }

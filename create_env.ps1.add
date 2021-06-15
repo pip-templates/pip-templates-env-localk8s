@@ -1,10 +1,4 @@
-# Install k8s cluster
-switch ($config.env_type) {
-    "local" { 
-        . "$($rootPath)/src/install_k8s.ps1" $ConfigPath
-        . "$($rootPath)/src/configure_k8s.ps1" $ConfigPath
-     }
-     Default {
-         Write-Host "Platform type not specified in config file. Please add 'env_type' to config."
-     }
-}
+###################################################################
+# Create the k8s cluster
+. "$($rootPath)/kubernetes/create.ps1" -ConfigPath "$ConfigPath" -ConfigPrefix "k8s" -ResourcePath "$ResourcePath" -ResourcePrefix "k8s"
+###################################################################

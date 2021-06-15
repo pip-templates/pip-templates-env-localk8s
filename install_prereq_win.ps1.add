@@ -2,8 +2,4 @@
 choco install --yes kubernetes-cli 
 choco install --yes docker
 choco install --yes virtualbox
-# Version 0.26 has problems running with Hyper-V
-choco install --yes minikube --version 0.25.2
-
-# Install vagrant
-choco install --yes vagrant
+choco install --yes minikube --version 1.17.0
