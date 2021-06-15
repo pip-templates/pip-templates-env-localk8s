@@ -7,6 +7,7 @@ This module stores scripts for management local kubernetes environment.
 
 - Download this repository
 - Copy *kubernetes* folder to master template
+- Copy *common/context.ps1* to master template
 - Add content of *.ps1.add* files to correspondent files from master template
 - Add content of *config/config.k8s.json.add* to json config file from master template and set the required values
 
