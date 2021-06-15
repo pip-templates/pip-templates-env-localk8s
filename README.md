@@ -20,7 +20,7 @@ Config variables description
 | environment.type | local | Type of the environment |
 | environment.type | local | Version of the environment |
 | k8s.minikube_home |  | Path to minikube home directory. Can be empty |
-| k8s,version | v1.20.2 | Version of installing kubernetes |
+| k8s.version | v1.20.2 | Version of installing kubernetes |
 | k8s.driver | docker | Name of kubernetes driver |
 | k8s.memory | 8198 | Allocated memory for minikube virtual machine |
 | k8s.cpus | 2 | Allocated cpu for minikube virtual machine |
